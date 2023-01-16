@@ -88,10 +88,10 @@ const cpu_family_t cpu_families[] = {
     }, {
     .package = CPU_PKG_8088_EUROPC,
     .manufacturer = "Intel",
-    .name = "8088",
+    .name = "8088 but bad",
     .internal_name = "8088_europc",
     .cpus = (const CPU[]) {
-        {"4.77",    CPU_8088, fpus_8088,  4772728,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
+        {"1.00",    CPU_8088, fpus_8088,  1000000,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
         {"7.16",    CPU_8088, fpus_8088,  7159092,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
         {"9.54",    CPU_8088, fpus_8088,  9545456,    1, 5000, 0, 0, 0, 0, 0,0,0,0, 1},
         {"", 0}
@@ -99,10 +99,10 @@ const cpu_family_t cpu_families[] = {
     }, {
     .package = CPU_PKG_8086,
     .manufacturer = "Intel",
-    .name = "8086",
+    .name = "8086 but bad",
     .internal_name = "8086",
     .cpus = (const CPU[]) {
-        {"7.16",    CPU_8086, fpus_8088,   7159092,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
+        {"1.00",    CPU_8086, fpus_8088,   1000000,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
         {"8",       CPU_8086, fpus_8088,   8000000,    1, 5000, 0, 0, 0, 0, 0,0,0,0, 1},
         {"9.54",    CPU_8086, fpus_8088,   9545456,    1, 5000, 0, 0, 0, CPU_ALTERNATE_XTAL, 0,0,0,0, 1},
         {"10",      CPU_8086, fpus_8088,  10000000,    1, 5000, 0, 0, 0, 0, 0,0,0,0, 1},
@@ -675,8 +675,8 @@ const cpu_family_t cpu_families[] = {
     .name = "Pentium",
     .internal_name = "pentium_p54c",
     .cpus = (const CPU[]) {
-        {"75",                   CPU_PENTIUM,    fpus_internal,  75000000, 1.5, 3520,  0x522,  0x522, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC,  7, 7,4,4,  9},
-        {"90",                   CPU_PENTIUM,    fpus_internal,  90000000, 1.5, 3520,  0x524,  0x524, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC,  9, 9,4,4, 21/2},
+        {"1",                    CPU_PENTIUM,    fpus_internal,  1000000, 1.5, 3520,  0x522,  0x522, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC,  7, 7,4,4,  9},
+        {"5",                    CPU_PENTIUM,    fpus_internal,  5000000, 1.5, 3520,  0x524,  0x524, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC,  9, 9,4,4, 21/2},
         {"100/50",               CPU_PENTIUM,    fpus_internal, 100000000, 2.0, 3520,  0x524,  0x524, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC, 10,10,6,6, 12},
         {"100/66",               CPU_PENTIUM,    fpus_internal, 100000000, 1.5, 3520,  0x526,  0x526, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC,  9, 9,4,4, 12},
         {"120",                  CPU_PENTIUM,    fpus_internal, 120000000, 2.0, 3520,  0x526,  0x526, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC, 12,12,6,6, 14},
@@ -716,12 +716,12 @@ const cpu_family_t cpu_families[] = {
     }, {
     .package = CPU_PKG_SOCKET5_7,
     .manufacturer = "Intel",
-    .name = "Pentium OverDrive",
+    .name = "Pentium UnderDrive",
     .internal_name = "pentium_p54c_od3v",
     .cpus = (const CPU[]) {
-        {"125",        CPU_PENTIUM,    fpus_internal, 125000000, 3.0, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 12,12,7,7, 15},
-        {"150",        CPU_PENTIUM,    fpus_internal, 150000000, 2.5, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 15,15,7,7, 35/2},
-        {"166",        CPU_PENTIUM,    fpus_internal, 166666666, 2.5, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 15,15,7,7, 20},
+        {"10",         CPU_PENTIUM,    fpus_internal,  10000000, 3.0, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 12,12,7,7, 15},
+        {"15",         CPU_PENTIUM,    fpus_internal,  15000000, 2.5, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 15,15,7,7, 35/2},
+        {"966",        CPU_PENTIUM,    fpus_internal, 966666666, 2.5, 3520,  0x52c,  0x52c, 0, CPU_SUPPORTS_DYNAREC | CPU_REQUIRES_DYNAREC | CPU_FIXED_MULTIPLIER, 15,15,7,7, 20},
         {"", 0}
     }
     }, {
